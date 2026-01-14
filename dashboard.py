@@ -3,7 +3,12 @@ import requests
 import json
 
 # --- CONFIGURATION ---
-API_URL = "http://127.0.0.1:8000/predict"
+
+# Localhost for development
+# API_URL = "http://127.0.0.1:8000/predict"
+
+# Deployed API endpoint
+API_URL = "https://student-score-prediction-ai.onrender.com/predict"
 
 st.set_page_config(page_title="Student Success AI", page_icon="🎓")
 
