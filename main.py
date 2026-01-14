@@ -102,7 +102,14 @@ def predict_score(data: StudentInput):
 
         # Predict
         prediction = model.predict(model_inputs)
-        result = float(prediction[0][0])
+        raw_result = float(prediction[0][0])
+
+        if raw_result > 100:
+            result = 100.0
+        elif raw_result < 0:
+            result = 0.0
+        else:
+            result = raw_result
         
         logger.info(f"✅ Prediction success: {result:.2f}")
         return {"predicted_exam_score": result}
