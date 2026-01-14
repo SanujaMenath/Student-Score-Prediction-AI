@@ -12,16 +12,16 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI(
-    title="Student Score Prediction API",
+    title="EduMetrics AI - Student Score Prediction API",
     description="Production-ready API for predicting student exam scores.",
     version="1.0.0"
 )
 
-# --- 2. CORS POLICY (Security Requirement) ---
-# Allows your frontend (running on a different port) to talk to this API
+# 2. CORS POLICY 
+# Allows your frontend running on a different port/domain to access this API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In real production, replace "*" with specific domain
+    allow_origins=["localhost:8501", "http://https://student-score-prediction-ai-ylefamztjrjcpndjsqyn3b.streamlit.app/"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -17,7 +17,7 @@ st.title("🎓 AI Student Score Predictor")
 st.markdown("Use this tool to predict student performance based on their habits and demographics.")
 
 # SIDEBAR INPUTS
-st.sidebar.header("Student Profile")
+st.sidebar.header("Student Details")
 
 # Dropdowns to prevent from typos!
 gender = st.sidebar.selectbox("Gender", ["male", "female", "other"])
