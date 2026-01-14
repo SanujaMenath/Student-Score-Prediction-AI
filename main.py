@@ -6,8 +6,8 @@ import pandas as pd
 import tensorflow as tf
 import joblib
 
-# --- 1. SETUP LOGGING (Production Requirement) ---
-# This tracks every event, error, and prediction in your terminal
+# 1. Setup LOGGING 
+# This tracks every event, error, and prediction in the terminal
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -27,7 +27,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- 3. INPUT VALIDATION SCHEMA ---
+# 3. INPUT VALIDATION SCHEMA 
 class StudentInput(BaseModel):
     gender: str
     course: str
@@ -41,7 +41,7 @@ class StudentInput(BaseModel):
     class_attendance: float
     sleep_hours: float
 
-# --- 4. LOAD ARTIFACTS ON STARTUP ---
+#  4. LOAD ARTIFACTS ON STARTUP 
 try:
     model = tf.keras.models.load_model("student_score_model.keras")
     encoders = joblib.load("label_encoders.pkl")

@@ -62,7 +62,10 @@ if st.button("🚀 Predict Exam Score", type="primary"):
                 
                 # Display Result nicely
                 st.success(f"Predicted Score: **{score:.1f}%**")
-                st.progress(int(score))
+
+                # Ensure the value is strictly between 0 and 100
+                safe_progress = min(max(int(score), 0), 100)
+                st.progress(safe_progress)
                 
                 if score > 75:
                     st.balloons()
