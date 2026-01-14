@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import json
 
-# --- CONFIGURATION ---
+# Configuration
 
 # Localhost for development
 # API_URL = "http://127.0.0.1:8000/predict"
@@ -10,13 +10,13 @@ import json
 # Deployed API endpoint
 API_URL = "https://student-score-prediction-ai.onrender.com/predict"
 
-st.set_page_config(page_title="Student Success AI", page_icon="🎓")
+st.set_page_config(page_title="EduMetrics AI", page_icon="🎓")
 
-# --- UI HEADER ---
+# UI HEADER AND DESCRIPTION
 st.title("🎓 AI Student Score Predictor")
 st.markdown("Use this tool to predict student performance based on their habits and demographics.")
 
-# --- SIDEBAR INPUTS ---
+# SIDEBAR INPUTS
 st.sidebar.header("Student Profile")
 
 # Dropdowns to prevent from typos!
@@ -34,7 +34,7 @@ study_hours = st.sidebar.slider("Study Hours (per day)", 0, 15, 5)
 attendance = st.sidebar.slider("Class Attendance (%)", 0, 100, 85)
 sleep_hours = st.sidebar.slider("Sleep Hours (per night)", 0, 12, 7)
 
-# --- PREDICTION LOGIC ---
+#  PREDICTION LOGIC 
 if st.button("🚀 Predict Exam Score", type="primary"):
     # 1. Prepare the payload matches Pydantic schema
     payload = {
