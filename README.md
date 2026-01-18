@@ -1,7 +1,7 @@
 # 🎓 EduMetrics AI: Student Performance Prediction System
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://edumetrics-ai.streamlit.app])
-[![API Status](https://img.shields.io/badge/API-Online-green)](https://edumetrics-api.onrender.com/docs)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://https://share.streamlit.io])
+[![API Status](https://img.shields.io/badge/API-Online-green)](https://render.com)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
