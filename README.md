@@ -38,7 +38,6 @@ The system is deployed using a modern **Client-Server Architecture**:
 ## 📂 Project Structure
 ```bash
 student-score-prediction-ai/
-├── 📂 .streamlit/          # Streamlit configuration
 ├── 📄 main.py              # FastAPI Backend (The "Brain")
 ├── 📄 dashboard.py         # Streamlit Frontend (The "Face")
 ├── 📄 train.ipynb          # Jupyter Notebook for Model Training & EDA
